@@ -55,6 +55,7 @@ client.on(Events.MessageCreate, async (message: Message) => {
       const body = {
         type: 'channel_mention',
         userId: message.author.id,
+        username: message.author.username,
         message: message.content,
         channelId: message.channel.id,
       };
